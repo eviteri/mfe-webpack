@@ -1,16 +1,15 @@
-import React, { FC } from "react";
-import { Switch, Route, Router, RouterProps } from "react-router-dom";
-import { QueryClient, QueryClientProvider } from "react-query";
-import { ReactQueryDevtools } from "react-query/devtools";
-import Dashboard from "./pages/DashBoard";
-import News from "./pages/News";
-import LearningCenter from "./pages/LearningCenter";
+import React, { FC } from 'react'
+import { Switch, Route, Router, RouterProps } from 'react-router-dom'
+import { QueryClient, QueryClientProvider } from 'react-query'
+import { ReactQueryDevtools } from 'react-query/devtools'
+import Dashboard from './pages/DashBoard'
+import News from './pages/News'
+import LearningCenter from './pages/LearningCenter'
 
 interface AppProps extends RouterProps {
-  queryClient: QueryClient;
+  queryClient: QueryClient
 }
 
-// Testing dashboard pipeline
 const App: FC<AppProps> = ({ history, queryClient }) => {
   return (
     <QueryClientProvider client={queryClient}>
@@ -23,7 +22,7 @@ const App: FC<AppProps> = ({ history, queryClient }) => {
       </Router>
       <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
-  );
-};
+  )
+}
 
-export default App;
+export default App

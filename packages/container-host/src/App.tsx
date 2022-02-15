@@ -20,6 +20,7 @@ const Main = styled.div<{ isSignedIn: boolean }>`
 
 const queryClient = new QueryClient()
 
+// Testing Pipeline
 function App() {
   const [isSignedIn, setIsSignedIn] = useState(false)
   const history = useHistory()
